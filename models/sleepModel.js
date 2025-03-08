@@ -1,25 +1,28 @@
-const mongoose = require('mongoose')
-mongoose.pluralize(null)
-const sleepSchema = new mongoose.Schema({
+const mongoose = require("mongoose");
+mongoose.pluralize(null);
+const sleepSchema = new mongoose.Schema(
+  {
     bedTime: {
-        type: String,
-        required: [true, "please add bed time"]
+      type: String,
+      required: [true, "please add bed time"],
     },
     wakeTime: {
-        type: String,
-        required: [true, "please add wake time"]
+      type: String,
+      required: [true, "please add wake time"],
     },
     differenceInMill: {
-        type: Number,
-        required: [true, "please add difference"]
+      type: Number,
+      required: [true, "please add difference"],
     },
     postedBy: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'User',
-        required: true
-    }
-}, {
-    timestamps: true
-})
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-module.exports = mongoose.model('Sleep', sleepSchema)
+module.exports = mongoose.model("Sleep", sleepSchema);

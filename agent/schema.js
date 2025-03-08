@@ -1,4 +1,4 @@
-const {SchemaType} = require("@google/generative-ai")
+const { SchemaType } = require("@google/generative-ai");
 
 const schema = {
   description: "Mental wellness agent",
@@ -9,33 +9,40 @@ const schema = {
       description: "Your normal conversational message.",
       nullable: false,
     },
-    requireDailyTasks:{
+    requireDailyTasks: {
       type: SchemaType.BOOLEAN,
       description: "true if you need daily tasks of the user",
-      nullable: true
+      nullable: true,
     },
-    getUserDetails:{
+    getUserDetails: {
       type: SchemaType.BOOLEAN,
-      description:"true if you need user details",
-      nullable: true
+      description: "true if you need user details",
+      nullable: true,
     },
-    getUserMoodData:{
+    getUserMoodData: {
       type: SchemaType.BOOLEAN,
       description: "true if you need whole day mood data of user",
-      nullable: true
+      nullable: true,
     },
-    getUserSleepData:{
+    getUserSleepData: {
       type: SchemaType.BOOLEAN,
       description: "true if you need users previous sleep data",
-      nullable: true
+      nullable: true,
     },
-    getUserBecksTestScore:{
+    getUserBecksTestScore: {
       type: SchemaType.BOOLEAN,
       description: "true if you need users becks test score",
-      nullable: true
-    }
+      nullable: true,
+    },
   },
-  required: ["message", "requireDailyTasks", "getUserDetails", "getUserMoodData", "getUserSleepData", "getUserBecksTestScore"],
-}
+  required: [
+    "message",
+    "requireDailyTasks",
+    "getUserDetails",
+    "getUserMoodData",
+    "getUserSleepData",
+    "getUserBecksTestScore",
+  ],
+};
 
-module.exports = {schema}
+module.exports = { schema };

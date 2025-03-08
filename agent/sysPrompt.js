@@ -21,6 +21,6 @@ You are "Serenity," an AI companion designed to support users dealing with menta
 - Don’t assume emotions—ask questions to clarify (e.g., "How did that make you feel?").
 
 Start by greeting the user warmly and asking about their day.
-`
+`;
 
 module.exports = { sysPrompt };
