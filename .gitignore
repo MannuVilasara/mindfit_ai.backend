@@ -1,4 +1,8 @@
 .vercel
 .env
 /node_modules/
+<<<<<<< HEAD
 /uploads/
+=======
+/uploads/
+>>>>>>> 802bf52 (chatbot updates)
